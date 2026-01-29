@@ -1,0 +1,18 @@
+CXX := g++
+
+CXXFLAGS := -O3 \
+          `sdl2-config --cflags`
+
+LDFLAGS := `sdl2-config --libs`
+
+SRCS := src/main.cpp src/tinymsx.cpp src/tinymsx_gw.cpp
+
+TARGET := tinymsx-emu
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+clean:
+	rm -f $(TARGET)
