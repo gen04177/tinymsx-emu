@@ -5,7 +5,7 @@ CXXFLAGS := -O3 \
 
 LDFLAGS := `sdl2-config --libs`
 
-SRCS := src/main.cpp src/tinymsx.cpp src/tinymsx_gw.cpp
+SRCS := src/main-sdl2.cpp src/tinymsx.cpp src/tinymsx_gw.cpp
 
 TARGET := tinymsx-emu
 
